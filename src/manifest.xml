@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package type="module">
+
+    <!-- UID of package. -->
+    <uid>mod.verone.historylog</uid>
+    <!-- Package name. -->
+    <name>HistoryLog</name>
+    <!-- Package version. -->
+    <version>0.1.0</version>
+    <!-- Package release date. -->
+    <relase-date>2015.11.10</relase-date>
+    <!-- Package license. -->
+    <license>GPLv3</license>
+    <!-- Author details. -->
+    <author>
+        <name>Adam Banaszkiewicz</name>
+        <url>http://www.veronecrm.com</url>
+    </author>
+
+    <!-- Database queries list -->
+    <db-query type="file">sql/install-history_change.sql</db-query>
+    <db-query type="file">sql/install-history_log.sql</db-query>
+
+</package>
