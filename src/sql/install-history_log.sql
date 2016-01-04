@@ -8,6 +8,10 @@ CREATE TABLE IF NOT EXISTS `#__history_log` (
   `object` varchar(127) COLLATE utf8_unicode_ci NOT NULL,
   `status` tinyint(4) NOT NULL,
   `module` varchar(63) COLLATE utf8_unicode_ci NOT NULL,
+  `relatedWith` int(11) DEFAULT NULL,
+  `type` char(1) COLLATE utf8_unicode_ci NOT NULL DEFAULT '1',
+  `log` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `entityId` (`entityId`)
+  KEY `entityId` (`entityId`),
+  KEY `relatedWith` (`relatedWith`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;

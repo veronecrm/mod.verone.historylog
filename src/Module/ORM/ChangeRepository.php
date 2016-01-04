@@ -2,7 +2,7 @@
 /**
  * Verone CRM | http://www.veronecrm.com
  *
- * @copyright  Copyright (C) 2015 Adam Banaszkiewicz
+ * @copyright  Copyright (C) 2015 - 2016 Adam Banaszkiewicz
  * @license    GNU General Public License version 3; see license.txt
  */
 
@@ -12,10 +12,10 @@ use CRM\ORM\Repository;
 
 class ChangeRepository extends Repository
 {
-  public $dbTable = '#__history_change';
+    public $dbTable = '#__history_change';
 
-  public function findAllByLog($id)
-  {
-    return $this->findAll('`change` = :change', [ ':change' => $id ]);
-  }
+    public function findAllByLog($id)
+    {
+        return $this->findAll('`change` = :change', [ ':change' => $id ]);
+    }
 }

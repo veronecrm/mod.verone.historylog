@@ -2,7 +2,7 @@
 /**
  * Verone CRM | http://www.veronecrm.com
  *
- * @copyright  Copyright (C) 2015 Adam Banaszkiewicz
+ * @copyright  Copyright (C) 2015 - 2016 Adam Banaszkiewicz
  * @license    GNU General Public License version 3; see license.txt
  */
 
@@ -12,229 +12,279 @@ use CRM\ORM\Entity;
 
 class Log extends Entity
 {
-  protected $id;
-  protected $authorId;
-  protected $authorName;
-  protected $entityId;
-  protected $entityName;
-  protected $date;
-  protected $object;
-  protected $status;
-  protected $module;
+    protected $id;
+    protected $authorId;
+    protected $authorName;
+    protected $entityId;
+    protected $entityName;
+    protected $date;
+    protected $object;
+    protected $status;
+    protected $module;
+    protected $log;
+    protected $type;
 
-  /**
-   * Gets the value of id.
-   *
-   * @return mixed
-   */
-  public function getId()
-  {
-    return $this->id;
-  }
+    /**
+     * Gets the value of id.
+     *
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
-  /**
-   * Sets the value of id.
-   *
-   * @param mixed $id the id
-   *
-   * @return self
-   */
-  public function setId($id)
-  {
-    $this->id = $id;
+    /**
+     * Sets the value of id.
+     *
+     * @param mixed $id the id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-   * Gets the value of authorId.
-   *
-   * @return mixed
-   */
-  public function getAuthorId()
-  {
-    return $this->authorId;
-  }
+    /**
+     * Gets the value of authorId.
+     *
+     * @return mixed
+     */
+    public function getAuthorId()
+    {
+        return $this->authorId;
+    }
 
-  /**
-   * Sets the value of authorId.
-   *
-   * @param mixed $authorId the author id
-   *
-   * @return self
-   */
-  public function setAuthorId($authorId)
-  {
-    $this->authorId = $authorId;
+    /**
+     * Sets the value of authorId.
+     *
+     * @param mixed $authorId the author id
+     *
+     * @return self
+     */
+    public function setAuthorId($authorId)
+    {
+        $this->authorId = $authorId;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-   * Gets the value of authorName.
-   *
-   * @return mixed
-   */
-  public function getAuthorName()
-  {
-    return $this->authorName;
-  }
+    /**
+     * Gets the value of authorName.
+     *
+     * @return mixed
+     */
+    public function getAuthorName()
+    {
+        return $this->authorName;
+    }
 
-  /**
-   * Sets the value of authorName.
-   *
-   * @param mixed $authorName the author name
-   *
-   * @return self
-   */
-  public function setAuthorName($authorName)
-  {
-    $this->authorName = $authorName;
+    /**
+     * Sets the value of authorName.
+     *
+     * @param mixed $authorName the author name
+     *
+     * @return self
+     */
+    public function setAuthorName($authorName)
+    {
+        $this->authorName = $authorName;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-   * Gets the value of entityId.
-   *
-   * @return mixed
-   */
-  public function getEntityId()
-  {
-    return $this->entityId;
-  }
+    /**
+     * Gets the value of entityId.
+     *
+     * @return mixed
+     */
+    public function getEntityId()
+    {
+        return $this->entityId;
+    }
 
-  /**
-   * Sets the value of entityId.
-   *
-   * @param mixed $entityId the entity id
-   *
-   * @return self
-   */
-  public function setEntityId($entityId)
-  {
-    $this->entityId = $entityId;
+    /**
+     * Sets the value of entityId.
+     *
+     * @param mixed $entityId the entity id
+     *
+     * @return self
+     */
+    public function setEntityId($entityId)
+    {
+        $this->entityId = $entityId;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-   * Gets the value of entityName.
-   *
-   * @return mixed
-   */
-  public function getEntityName()
-  {
-    return $this->entityName;
-  }
+    /**
+     * Gets the value of entityName.
+     *
+     * @return mixed
+     */
+    public function getEntityName()
+    {
+        return $this->entityName;
+    }
 
-  /**
-   * Sets the value of entityName.
-   *
-   * @param mixed $entityName the entity name
-   *
-   * @return self
-   */
-  public function setEntityName($entityName)
-  {
-    $this->entityName = $entityName;
+    /**
+     * Sets the value of entityName.
+     *
+     * @param mixed $entityName the entity name
+     *
+     * @return self
+     */
+    public function setEntityName($entityName)
+    {
+        $this->entityName = $entityName;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-   * Gets the value of date.
-   *
-   * @return mixed
-   */
-  public function getDate()
-  {
-    return $this->date;
-  }
+    /**
+     * Gets the value of date.
+     *
+     * @return mixed
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
 
-  /**
-   * Sets the value of date.
-   *
-   * @param mixed $date the date
-   *
-   * @return self
-   */
-  public function setDate($date)
-  {
-    $this->date = $date;
+    /**
+     * Sets the value of date.
+     *
+     * @param mixed $date the date
+     *
+     * @return self
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-   * Gets the value of object.
-   *
-   * @return mixed
-   */
-  public function getObject()
-  {
-    return $this->object;
-  }
+    /**
+     * Gets the value of object.
+     *
+     * @return mixed
+     */
+    public function getObject()
+    {
+        return $this->object;
+    }
 
-  /**
-   * Sets the value of object.
-   *
-   * @param mixed $object the object
-   *
-   * @return self
-   */
-  public function setObject($object)
-  {
-    $this->object = $object;
+    /**
+     * Sets the value of object.
+     *
+     * @param mixed $object the object
+     *
+     * @return self
+     */
+    public function setObject($object)
+    {
+        $this->object = $object;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-   * Gets the value of status.
-   *
-   * @return mixed
-   */
-  public function getStatus()
-  {
-    return $this->status;
-  }
+    /**
+     * Gets the value of status.
+     *
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
 
-  /**
-   * Sets the value of status.
-   *
-   * @param mixed $status the status
-   *
-   * @return self
-   */
-  public function setStatus($status)
-  {
-    $this->status = $status;
+    /**
+     * Sets the value of status.
+     *
+     * @param mixed $status the status
+     *
+     * @return self
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  /**
-   * Gets the value of module.
-   *
-   * @return mixed
-   */
-  public function getModule()
-  {
-    return $this->module;
-  }
+    /**
+     * Gets the value of module.
+     *
+     * @return mixed
+     */
+    public function getModule()
+    {
+        return $this->module;
+    }
 
-  /**
-   * Sets the value of module.
-   *
-   * @param mixed $module the module
-   *
-   * @return self
-   */
-  public function setModule($module)
-  {
-    $this->module = $module;
+    /**
+     * Sets the value of module.
+     *
+     * @param mixed $module the module
+     *
+     * @return self
+     */
+    public function setModule($module)
+    {
+        $this->module = $module;
 
-    return $this;
-  }
+        return $this;
+    }
+
+    /**
+     * Gets the value of log.
+     *
+     * @return mixed
+     */
+    public function getLog()
+    {
+        return $this->log;
+    }
+
+    /**
+     * Sets the value of log.
+     *
+     * @param mixed $log the log
+     *
+     * @return self
+     */
+    public function setLog($log)
+    {
+        $this->log = $log;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of type.
+     *
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Sets the value of type.
+     *
+     * @param mixed $type the type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
 }
